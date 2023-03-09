@@ -1,8 +1,12 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   experimental: {
     appDir: true,
   },
-}
-
-module.exports = nextConfig
+    images: {domains: ["m.media-amazon.com"]}
+  
+  }
+  
+  module.exports = nextConfig
