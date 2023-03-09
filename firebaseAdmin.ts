@@ -1,8 +1,7 @@
 import * as admin from 'firebase-admin'
 import { getApps } from 'firebase-admin/app'
 
-const serviceAccount = require('./serviceAccountKey.json');
-
+const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT_KEY as string);
 if(!getApps().length){
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
